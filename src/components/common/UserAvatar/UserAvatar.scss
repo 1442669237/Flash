@@ -1,0 +1,49 @@
+.user-avatar {
+  position: relative;
+  display: inline-block;
+
+  &__image {
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #f0f0f0;
+  }
+
+  &__gender {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 32rpx;
+    height: 32rpx;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20rpx;
+    color: #fff;
+    font-weight: bold;
+
+    &--male {
+      background-color: #4ECDC4;
+    }
+
+    &--female {
+      background-color: #FF6B6B;
+    }
+  }
+
+  &--small {
+    .user-avatar__gender {
+      width: 24rpx;
+      height: 24rpx;
+      font-size: 16rpx;
+    }
+  }
+
+  &--large {
+    .user-avatar__gender {
+      width: 40rpx;
+      height: 40rpx;
+      font-size: 24rpx;
+    }
+  }
+}

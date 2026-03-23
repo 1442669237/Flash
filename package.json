@@ -1,0 +1,39 @@
+{
+  "name": "flash-mini-program",
+  "version": "1.0.0",
+  "description": "闪现 - 线下即时社交组队小程序",
+  "private": true,
+  "scripts": {
+    "dev:weapp": "NODE_OPTIONS=--openssl-legacy-provider node node_modules/@tarojs/cli/bin/taro build --type weapp --watch",
+    "build:weapp": "NODE_OPTIONS=--openssl-legacy-provider node node_modules/@tarojs/cli/bin/taro build --type weapp",
+    "dev:h5": "NODE_OPTIONS=--openssl-legacy-provider node node_modules/@tarojs/cli/bin/taro build --type h5 --watch",
+    "build:h5": "NODE_OPTIONS=--openssl-legacy-provider node node_modules/@tarojs/cli/bin/taro build --type h5"
+  },
+  "dependencies": {
+    "@tarojs/components": "^3.6.27",
+    "@tarojs/mini-runner": "^3.6.37",
+    "@tarojs/plugin-framework-react": "^3.6.27",
+    "@tarojs/plugin-platform-weapp": "^3.6.27",
+    "@tarojs/react": "^3.6.27",
+    "@tarojs/runtime": "^3.6.27",
+    "@tarojs/taro": "^3.6.27",
+    "@tarojs/webpack5-runner": "^3.6.27",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "zustand": "^4.5.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.5",
+    "@babel/plugin-transform-nullish-coalescing-operator": "^7.28.6",
+    "@babel/plugin-transform-optional-chaining": "^7.28.6",
+    "@tarojs/cli": "^3.6.27",
+    "@types/react": "^18.2.0",
+    "typescript": "^5.4.5",
+    "webpack": "^5.91.0"
+  },
+  "browserslist": [
+    "last 3 versions",
+    "Android >= 4.4",
+    "iOS >= 9"
+  ]
+}

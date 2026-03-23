@@ -1,0 +1,131 @@
+.activity-card {
+  background: #fff;
+  border-radius: 24rpx;
+  padding: 28rpx;
+  margin: 16rpx 24rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+
+  &:active {
+    transform: scale(0.98);
+    box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.08);
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20rpx;
+  }
+
+  &__info {
+    flex: 1;
+    margin-left: 20rpx;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8rpx;
+  }
+
+  &__creator {
+    font-size: 28rpx;
+    font-weight: 600;
+    color: #2D3436;
+  }
+
+  &__address {
+    font-size: 24rpx;
+    color: #636E72;
+  }
+
+  &__content {
+    margin-bottom: 20rpx;
+  }
+
+  &__title {
+    font-size: 32rpx;
+    font-weight: 700;
+    color: #2D3436;
+    margin-bottom: 16rpx;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12rpx;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20rpx;
+    border-top: 1rpx solid #E9ECEF;
+  }
+
+  &__distance {
+    display: flex;
+    align-items: center;
+
+    &-icon {
+      font-size: 24rpx;
+      margin-right: 8rpx;
+    }
+
+    &-text {
+      font-size: 24rpx;
+      color: #636E72;
+    }
+  }
+
+  &__status {
+    padding: 8rpx 20rpx;
+    border-radius: 20rpx;
+    font-size: 24rpx;
+    font-weight: 600;
+
+    &-text {
+      color: #fff;
+    }
+
+    &--available {
+      background: linear-gradient(135deg, #4ECDC4, #44A08D);
+    }
+
+    &--almost {
+      background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+      animation: pulse 2s infinite;
+    }
+
+    &--full {
+      background: #636E72;
+    }
+  }
+
+  &__people {
+    display: flex;
+    align-items: center;
+
+    &-icon {
+      font-size: 24rpx;
+      margin-right: 8rpx;
+    }
+
+    &-text {
+      font-size: 24rpx;
+      color: #636E72;
+      font-weight: 600;
+    }
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}

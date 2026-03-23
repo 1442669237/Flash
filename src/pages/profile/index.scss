@@ -1,0 +1,201 @@
+.profile-page {
+  min-height: 100vh;
+  background-color: #F8F9FA;
+
+  &__header {
+    background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+    padding: 48rpx 32rpx;
+    padding-bottom: 80rpx;
+  }
+
+  &__avatar-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32rpx;
+  }
+
+  &__user-info {
+    margin-left: 24rpx;
+    flex: 1;
+  }
+
+  &__nickname {
+    font-size: 40rpx;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 12rpx;
+    display: block;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8rpx;
+  }
+
+  &__tag {
+    font-size: 22rpx;
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.2);
+    padding: 4rpx 12rpx;
+    border-radius: 8rpx;
+  }
+
+  &__credit {
+    background: #fff;
+    border-radius: 20rpx;
+    padding: 24rpx;
+
+    &-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16rpx;
+    }
+
+    &-label {
+      font-size: 28rpx;
+      font-weight: 600;
+      color: #2D3436;
+    }
+
+    &-level {
+      font-size: 24rpx;
+      font-weight: 600;
+    }
+
+    &-score {
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 12rpx;
+    }
+
+    &-number {
+      font-size: 48rpx;
+      font-weight: 700;
+    }
+
+    &-max {
+      font-size: 24rpx;
+      color: #B2BEC3;
+      margin-left: 4rpx;
+    }
+
+    &-bar {
+      height: 12rpx;
+      background: #E9ECEF;
+      border-radius: 6rpx;
+      overflow: hidden;
+
+      &-fill {
+        height: 100%;
+        border-radius: 6rpx;
+        transition: width 0.3s ease;
+      }
+    }
+  }
+
+  &__activities {
+    margin-top: -40rpx;
+    padding: 0 16rpx;
+  }
+
+  &__tabs {
+    display: flex;
+    background: #fff;
+    border-radius: 16rpx 16rpx 0 0;
+    padding: 0 24rpx;
+    box-shadow: 0 -4rpx 20rpx rgba(0, 0, 0, 0.05);
+  }
+
+  &__tab {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24rpx 0;
+    position: relative;
+
+    &--active {
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60rpx;
+        height: 6rpx;
+        background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+        border-radius: 3rpx;
+      }
+    }
+
+    &-text {
+      font-size: 28rpx;
+      color: #636E72;
+    }
+
+    &--active &-text {
+      color: #FF6B6B;
+      font-weight: 600;
+    }
+
+    &-count {
+      margin-left: 8rpx;
+      font-size: 24rpx;
+      color: #B2BEC3;
+    }
+
+    &--active &-count {
+      color: #FF6B6B;
+    }
+  }
+
+  &__activity-list {
+    background: #fff;
+    border-radius: 0 0 16rpx 16rpx;
+    padding-bottom: 24rpx;
+  }
+
+  &__empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80rpx 0;
+
+    &-text {
+      font-size: 28rpx;
+      color: #B2BEC3;
+    }
+  }
+
+  &__settings {
+    margin-top: 24rpx;
+    background: #fff;
+    border-radius: 16rpx;
+    margin: 24rpx;
+    overflow: hidden;
+  }
+
+  &__setting-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28rpx 24rpx;
+    border-bottom: 1rpx solid #E9ECEF;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__setting-text {
+    font-size: 28rpx;
+    color: #2D3436;
+  }
+
+  &__setting-arrow {
+    font-size: 32rpx;
+    color: #B2BEC3;
+  }
+}

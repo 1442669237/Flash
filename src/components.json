@@ -1,0 +1,27 @@
+import { ComponentType } from 'react';
+import { View, Text, Map, Input, ScrollView, Swiper, Navigator, Image, Camera, LivePlayer, Canvas, WebView, OpenData, ContactButton } from '@tarojs/components';
+import { Characteristic, BluetoothError, NobleState, PERipheral } from '@tarojs/plugin-platform-weapp';
+
+export {
+  View,
+  Text,
+  Map,
+  Input,
+  ScrollView,
+  Swiper,
+  SwiperItem,
+  Navigator,
+  Image,
+  Camera,
+  LivePlayer,
+  Canvas,
+  WebView,
+  OpenData,
+  ContactButton,
+  Characteristic,
+  BluetoothError,
+  NobleState,
+  PERipheral,
+};
+
+export type { ComponentType };
