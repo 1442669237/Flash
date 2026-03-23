@@ -1,5 +1,9 @@
+/**
+ * @deprecated 此文件已弃用，请使用 src/services/api.ts 替代
+ * Mock 数据仅用于本地开发无网络环境
+ */
 import { Activity, User, Message } from '../types';
-import { generateId } from '../utils';
+import { generateId as utilGenerateId } from '../utils';
 
 // 模拟用户数据
 export const mockUsers: User[] = [
@@ -202,9 +206,8 @@ export const generateMockMessages = (activityId: string): Message[] => {
 // 模拟 API 延迟
 const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
-// API 服务
-export const api = {
-  // 获取活动列表
+// Mock API 服务（已弃用）
+export const mockApi = {
   async getActivities(location?: { latitude: number; longitude: number }): Promise<Activity[]> {
     await delay(500);
     return mockActivities.filter(activity => {
@@ -216,17 +219,15 @@ export const api = {
     });
   },
 
-  // 获取活动详情
   async getActivityById(id: string): Promise<Activity | null> {
     await delay(300);
     return mockActivities.find(a => a.id === id) || null;
   },
 
-  // 创建活动
   async createActivity(data: Partial<Activity>): Promise<Activity> {
     await delay(500);
     const newActivity: Activity = {
-      id: generateId(),
+      id: utilGenerateId(),
       creatorId: currentUser.id,
       creator: currentUser,
       title: data.title || '',
@@ -245,7 +246,6 @@ export const api = {
     return newActivity;
   },
 
-  // 加入活动
   async joinActivity(activityId: string): Promise<Activity> {
     await delay(300);
     const activity = mockActivities.find(a => a.id === activityId);
@@ -262,7 +262,6 @@ export const api = {
     return activity;
   },
 
-  // 退出活动
   async leaveActivity(activityId: string): Promise<void> {
     await delay(300);
     const activity = mockActivities.find(a => a.id === activityId);
@@ -274,17 +273,15 @@ export const api = {
     }
   },
 
-  // 获取消息
   async getMessages(activityId: string): Promise<Message[]> {
     await delay(300);
     return generateMockMessages(activityId);
   },
 
-  // 发送消息
   async sendMessage(activityId: string, content: string, type: 'text' | 'location' = 'text'): Promise<Message> {
     await delay(200);
     const message: Message = {
-      id: generateId(),
+      id: utilGenerateId(),
       activityId,
       senderId: currentUser.id,
       sender: currentUser,
@@ -295,20 +292,17 @@ export const api = {
     return message;
   },
 
-  // 获取用户信息
   async getUserInfo(): Promise<User> {
     await delay(200);
     return currentUser;
   },
 
-  // 更新用户信息
   async updateUserInfo(data: Partial<User>): Promise<User> {
     await delay(300);
     Object.assign(currentUser, data);
     return currentUser;
   },
 
-  // 获取用户参与的活动
   async getUserActivities(userId: string): Promise<{ created: Activity[]; joined: Activity[] }> {
     await delay(400);
     const created = mockActivities.filter(a => a.creatorId === userId);

@@ -10,6 +10,7 @@
     "build:h5": "NODE_OPTIONS=--openssl-legacy-provider node node_modules/@tarojs/cli/bin/taro build --type h5"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.99.3",
     "@tarojs/components": "^3.6.27",
     "@tarojs/mini-runner": "^3.6.37",
     "@tarojs/plugin-framework-react": "^3.6.27",
